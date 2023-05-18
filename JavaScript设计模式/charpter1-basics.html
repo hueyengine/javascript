@@ -10,8 +10,20 @@
 </head>
 
 <body>
+    <div id="div1">我是一个div</div>
     <!-- link 引入的 js 和 script 引入的 js 在加载顺序有什么区别？ -->
-    <script src="./charpter1-basics.js"></script>
+    <!-- <script src="./charpter1-basics.js"></script> -->
+    <script src="./charpter2.js"></script>
+    <script>
+        window.id = 'window';
+        document.getElementById('div1').onclick = function () {
+            alert(this.id)
+            var callback = function () {
+                alert(this.id)
+            }
+            callback();
+        }
+    </script>
 </body>
 
 </html>
