@@ -1,0 +1,19 @@
+{
+  "name": "typescript-basict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anbelin/javascript-design-pattern.git"
+  },
+  "author": "anbelin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anbelin/javascript-design-pattern/issues"
+  },
+  "homepage": "https://github.com/Anbelin/javascript-design-pattern#readme"
+}
