@@ -28,7 +28,14 @@ webpack在打包的时候会将css文件直接打包到js文件里，即css in j
 
 MiniCssExtractPlugin：这个插件一般会在线上打包环境中使用，在开发环境中不使用。因为该插件不支持HMR热模块更新。1、若css文件直接被页面引用，那么该插件直接走filename配置选项，若是间接引用，则走chunkFileName配置选项。
 
+## Hot Module Replacement 热模块更新
+  使用webpack-dev-server，当代码发生了改变，页面就会刷新全部重新加载一次。当只改了部分代码不想让页面刷新时，而只是改变部分模块代码对应的页面时，这时就需要使用HMR了。
+  当改变了某个js模块文件的代码，只想让这个js文件对应的页面发生改变，则需要Module.hot.accept()。
  
+## 使用Babel处理ES6语法
+  webpack配置Babel-loader、@babel/preset-env、@babel/pollyfill。我们需要知道vue、react这种代码通过webpack打包后会生成浏览器支持的ES5的代码。了解babel的抽象语法树等概念后，我们可以知道vue等框架代码是如何转成ES5原生代码的。（适合业务代码）
+  @babel/plugin-transform-runtime、@babel/runtime、@babel/runtime-corejs2。这种方法打包第三方组件库等代码可以避免污染全局环境。（适合第三方物料库、组件库代码）
+  babel下面的options里面的配置可以单独摘出来放在babelIrc文件里。
 
 ## 打包分析，Preloading，Prefetching
 
